@@ -10,27 +10,127 @@
   		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   		<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+  		<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  color: black;
+}
+img{
+  max-width: 50%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+</style>
+
 	</head>
 	<body class='bg-dark'>
 		<div class="jumbotron text-center bg-dark">
   			<h1 class="text-warning"><img src="https://img.icons8.com/plasticine/100/000000/brief.png"/> SumItUp : Extractive Text Summarizer</h1>
-  			<a href="https://github.com/guptaharshnavin/Graduate-Admission-Chance-Forecaster" class='btn btn-outline-warning'>Project Repository <i class="fa fa-github"></i></a>
-    		<a href="https://www.linkedin.com/in/harsh-gupta-b24a93185/" class="btn btn-outline-warning">Development Team</a>
+  			<a href="https://github.com/guptaharshnavin/SumItUp-Extractive-Text-Summarizer" class='btn btn-outline-warning'>Project Repository <i class="fa fa-github"></i></a>
+    		<a href="dev_team.html" class="btn btn-outline-warning">Development Team</a>
 		</div>
 		<div class="container text-white content-center">
 			<div class="row">
 				<h2 class="text-warning text-center col-sm-12"><img src="https://img.icons8.com/color/48/000000/project.png"/> Project Development Team</h2>
 			</div>
 			<br>
-			<div style="width:100%;">
-				<div class="LI-profile-badge"  style="float:left;width:23%;margin:1%;padding:10px" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="harsh-gupta-b24a93185"><a class="LI-simple-link" href='https://in.linkedin.com/in/harsh-gupta-b24a93185?trk=profile-badge'>Harsh Gupta</a></div>
-				<div class="LI-profile-badge"  style="float:left;width:23%;margin:1%;" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="harsh-gupta-b24a93185"><a class="LI-simple-link" href='https://in.linkedin.com/in/harsh-gupta-b24a93185?trk=profile-badge'>Harsh Gupta</a></div>
-				<div class="LI-profile-badge"  style="float:left;width:23%;margin:1%;" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="harsh-gupta-b24a93185"><a class="LI-simple-link" href='https://in.linkedin.com/in/harsh-gupta-b24a93185?trk=profile-badge'>Harsh Gupta</a></div>
-				<div class="LI-profile-badge"  style="float:left;width:23%;margin:1%;" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="harsh-gupta-b24a93185"><a class="LI-simple-link" href='https://in.linkedin.com/in/harsh-gupta-b24a93185?trk=profile-badge'>Harsh Gupta</a></div>
-		</div>
-		</div>
-		<div class='text-center text-white'><a href="https://icons8.com/icon/qGGl2WuDAF0Z/brief">Brief icon by Icons8</a></div>
-		<div class='text-center text-white'><a href="https://icons8.com/icon/104229/project">Project icon by Icons8</a></div>
+			
 
+		<div class="row">
+		  <div class="column">
+		    <div class="card">
+		      <img src="harsh.jpg" alt="Harsh">
+		      <h3>Harsh Gupta</h3>
+		      <p>KJSCE</p>
+		      <p style="word-spacing: 20px;">
+			      <a href="https://www.linkedin.com/in/harsh-gupta-b24a93185"><i class="fa fa-linkedin-square" style="font-size:24px; color:black"></i></i></a>
+
+			      <a href="https://github.com/guptaharshnavin"><i class="fa fa-github" style="font-size:24px; color:black"></i></a>
+			   </p>
+		    </div>
+		  </div>
+
+		  <div class="column">
+		    <div class="card">
+		      <img src="dhruv.jpg" alt="Dhruv">
+		      <h3>Dhruv Gandhi</h3>
+		      <p>KJSCE</p>
+		      <p style="word-spacing: 20px;">
+			      <a href="https://www.linkedin.com/in/gandhidhruv"><i class="fa fa-linkedin-square" style="font-size:24px; color:black"></i></i></a>
+
+			      <a href="https://github.com/dhruvgandhi"><i class="fa fa-github" style="font-size:24px; color:black"></i></a>
+			   </p>
+		    </div>
+		  </div>
+		  
+		  <div class="column">
+		    <div class="card">
+		      <img src="Rushabh.jpg" alt="Rushabh">
+		      <h3>Rushabh Doshi</h3>
+		      <p>KJSCE</p>
+		      <p style="word-spacing: 20px;">
+			      <a href="https://www.linkedin.com/in/rushabh1998/"><i class="fa fa-linkedin-square" style="font-size:24px; color:black"></i></i></a>
+
+			      <a href="https://github.com/rush2hell"><i class="fa fa-github" style="font-size:24px; color:black"></i></a>
+			   </p>
+		    </div>
+		  </div>
+		  
+		  <div class="column">
+		    <div class="card">
+		      <img src="shoaib.jpg" alt="shoaib">
+		      <h3>Shoaib Shaikh</h3>
+		      <p>KJSCE</p>
+		      <p style="word-spacing: 20px;">
+			     <a href="https://www.linkedin.com/in/theshoaibshaikh/"><i class="fa fa-linkedin-square" style="font-size:24px; color:black"></i></i></a>
+
+			      <a href="https://github.com/theshoaibshaikh"><i class="fa fa-github" style="font-size:24px; color:black"></i></a>
+			   </p>
+		    </div>
+		  </div>
+		</div>
+
+
+		</div>
 	</body>
 </html>
