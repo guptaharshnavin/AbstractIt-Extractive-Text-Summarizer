@@ -10,13 +10,16 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from sklearn.feature_extraction.text import CountVectorizer
 # Importing Flask Related Components
 from flask import Flask, request, render_template
-import pickle
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
 	return render_template('index.html')
+
+@app.route('/dev_team/')
+def dev_team():
+    return render_template('dev_team.html')
 
 @app.route('/summarize',methods=['POST'])
 def summarize():
@@ -90,9 +93,14 @@ def summarize():
 	number_of_sentences = form_features[1]
 	final_para = ""
 
-	for i in range(0, number_of_sentences):
-		sentence_tuple = sorted_sentences[i]
-		final_para = final_para + sentence_tuple[0].text
+	if number_of_sentences > number_of_sents:
+		final_para = "Length Of Desired Summary Greater than Input Text"
+	elif number_of_sentences <= 0:
+		final_para = "Length Of Desired Summary Must Greater Than 0"
+	else:
+		for i in range(0, number_of_sentences):
+			sentence_tuple = sorted_sentences[i]
+			final_para = final_para + sentence_tuple[0].text
 
 	most_head = "Most Occurring Words : "
 	summ_head = "Summary Of Text"

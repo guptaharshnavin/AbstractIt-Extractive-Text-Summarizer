@@ -14,7 +14,7 @@
 		<div class="jumbotron text-center bg-dark">
   			<h1 class="text-warning"><img src="https://img.icons8.com/plasticine/100/000000/brief.png"/> SumItUp : Extractive Text Summarizer</h1>
   			<a href="https://github.com/guptaharshnavin/SumItUp-Extractive-Text-Summarizer" class='btn btn-outline-warning'>Project Repository <i class="fa fa-github"></i></a>
-    		<a href="dev_team.html" class="btn btn-outline-warning">Development Team</a>
+    		<a href="{{ url_for('dev_team') }}" class="btn btn-outline-warning">Development Team</a>
 		</div>
 		<div class="container text-white">
 		   <form action="{{ url_for('summarize')}}" method="post">
