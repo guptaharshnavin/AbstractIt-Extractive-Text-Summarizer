@@ -10,6 +10,8 @@ from spacy.lang.en.stop_words import STOP_WORDS
 from sklearn.feature_extraction.text import CountVectorizer
 # Importing Flask Related Components
 from flask import Flask, request, render_template
+# Import Rouge Scorer
+from rouge_score import rouge_scorer
 
 app = Flask(__name__)
 
@@ -104,9 +106,16 @@ def summarize():
 
 	most_head = "Most Occurring Words : "
 	summ_head = "Summary Of Text"
+	rouge_head = "Rouge Scores"
 	most_frequent_words = most_frequent_words[0:-2]
+
+	# Initializing Rouge Scorer Object
+	rscorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rouge3'], use_stemmer=True)
+	r_scores = rscorer.score(paragraph, final_para)
 	return render_template('index.html', summary_text = final_para, most_heading = most_head, most_words = most_frequent_words,
-		summ_head = summ_head)	
+		summ_head = summ_head, rouge_head=rouge_head, rouge_1_head='Rouge 1 Scores : ',
+		rouge_2_head='Rouge 2 Scores : ', rouge_3_head='Rouge 3 Scores : ',
+		rouge_1=r_scores['rouge1'], rouge_2=r_scores['rouge2'], rouge_3=r_scores['rouge3'])	
 
 if __name__ == '__main__':
 	app.run(debug=False)
